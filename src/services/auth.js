@@ -88,10 +88,13 @@ export const useAuth = () => {
     if (!state.token) return
     try {
       const response = await apiRequest('/api/v1/wallet')
-      if (response?.data) {
+      const walletSource = response?.data?.wallet || response?.data || response?.wallet
+      if (walletSource) {
+        const credits = response.data?.balance_credits ?? walletSource.balance_credits ?? 0
+        const usd = response.data?.balance_usd ?? walletSource.balance_usd ?? (credits / 1000)
         state.wallet = {
-          balance_credits: response.data.balance_credits || 0,
-          balance_usd: response.data.balance_usd || (response.data.balance_credits / 1000),
+          balance_credits: Number(credits),
+          balance_usd: Number(usd),
         }
       }
     } catch {

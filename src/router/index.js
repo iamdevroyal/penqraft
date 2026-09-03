@@ -4,6 +4,11 @@ import PricingView from '../views/PricingView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import StudioView from '../views/StudioView.vue'
+import AppShellLayout from '../layouts/AppShellLayout.vue'
+import ProjectsView from '../views/app/ProjectsView.vue'
+import WalletView from '../views/app/WalletView.vue'
+import ProfileView from '../views/app/ProfileView.vue'
+import SettingsView from '../views/app/SettingsView.vue'
 import { getAuthToken } from '../services/api'
 
 const routes = [
@@ -33,9 +38,44 @@ const routes = [
   },
   {
     path: '/app',
-    name: 'studio',
-    component: StudioView,
-    meta: { title: 'PenQraft Studio — Workspace', requiresAuth: true },
+    component: AppShellLayout,
+    meta: { requiresAuth: true },
+    children: [
+      {
+        path: '',
+        redirect: '/app/studio',
+      },
+      {
+        path: 'studio',
+        name: 'studio',
+        component: StudioView,
+        meta: { title: 'PenQraft Studio — Workspace', requiresAuth: true },
+      },
+      {
+        path: 'projects',
+        name: 'projects',
+        component: ProjectsView,
+        meta: { title: 'Manuscript Projects — PenQraft', requiresAuth: true },
+      },
+      {
+        path: 'wallet',
+        name: 'wallet',
+        component: WalletView,
+        meta: { title: 'Wallet & Billing — PenQraft', requiresAuth: true },
+      },
+      {
+        path: 'profile',
+        name: 'profile',
+        component: ProfileView,
+        meta: { title: 'Author Profile — PenQraft', requiresAuth: true },
+      },
+      {
+        path: 'settings',
+        name: 'settings',
+        component: SettingsView,
+        meta: { title: 'Studio Settings — PenQraft', requiresAuth: true },
+      },
+    ],
   },
   {
     path: '/:pathMatch(.*)*',
