@@ -1,0 +1,18 @@
+# PenQraft Studio — AI Literary Workspace
+
+> The Multi-Agent AI Platform for Serious Literary, Novel, and Long-Form Authors.
+
+PenQraft is an autonomous long-form narrative craft workspace that orchestrates an ensemble of 8 specialized AI agents across a persistent Story Bible, dynamic character lore, and an Evaluator-Optimizer revision engine to architect novels, memoirs, and screenplays exceeding 100,000 words without context decay or hallucinations.
+
+## Key Features
+- **Persistent Story Bible & Supersession Engine**: Maintains an immutable canon ledger across chapters to prevent character inconsistencies, timeline contradictions, and worldbuilding errors.
+- **8-Agent Specialized Pipeline**: Concept Agent (Ideation), Structure Agent (Beats & Pacing), Worldbuilding Agent (Lore & Psychology), Drafting Agent (Publication-Grade Prose), Continuity Agent (Canon Audit), Editorial Agent (4-Pillar Evaluation), Stylist Agent (Voice & Rhythm), and Export Agent (Typesetting).
+- **Evaluator-Optimizer Revision Loop**: Evaluates drafts on 4 weighted craft pillars: Sensory Specificity (0.25), Dramatic Stakes (0.25), Canon Consistency (0.25), and Voice & Rhythm (0.25).
+- **Manuscript Compilations**: One-click export into Standard Manuscript Format Markdown, Fountain Screenplay syntax, EPUB 3.0 digital books, and print-ready PDF.
+- **Transparent Economics**: $1.00 USD equals 1,000 credits metered dynamically against direct provider rates with zero hidden markups.
+- **100% Commercial Ownership**: Authors retain full legal copyright and commercial publishing rights.
+
+## URLs
+- Homepage: https://penqraft.com/
+- Pricing & Economics: https://penqraft.com/pricing
+- Studio App: https://penqraft.com/app
